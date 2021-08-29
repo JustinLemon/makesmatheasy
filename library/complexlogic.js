@@ -2771,3 +2771,18 @@ function factorialsol() {
         factorialsolprint.innerHTML = "Please enter a valid number.";
     }
 }
+
+function bmifind(){
+   
+    let inch = document.getElementById('bmis2').value;
+    let kg = document.getElementById('bmis3').value;
+
+    if( inch !=""||kg!=""){
+    let ans = kg / (inch*inch);
+    let bmi = document.getElementById('bmians');
+    bmi.innerHTML = "Your BMI : " + ans.toFixed(2);
+    }
+    else{
+        bmi.innerHTML = "Please enter a valid number.";
+    }
+}
