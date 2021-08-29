@@ -2771,3 +2771,24 @@ function factorialsol() {
         factorialsolprint.innerHTML = "Please enter a valid number.";
     }
 }
+
+function calTrigo(){
+    let a ="";
+    let b ="";
+    let c="";
+
+    let angle = document.getElementById("angle").value;
+    let value = angle * (Math.PI / 180);
+
+    a = Math.sin(value);
+    b = Math.cos(value);
+    c = Math.tan(value);
+    
+
+    let theSin = document.getElementById("sin");
+    theSin.innerHTML = "Sin of " + angle + " degree is " + a.toFixed(5);
+    let theCos = document.getElementById("cos");
+    theCos.innerHTML = "Cos of " + angle + " degree is " + b.toFixed(5);
+    let theTan = document.getElementById("tan");
+    theTan.innerHTML = "Tan of " + angle + " degree is " + c.toFixed(5);
+}
