@@ -2215,34 +2215,7 @@ renderMathInElement(document.getElementById("kurtans"));
 
 }
 
-function bmifind()
-{
-    a=document.getElementById("bmis1").value;  
-    b=document.getElementById("bmis2").value;  
-    c=document.getElementById("bmis3").value;   
-    var ans="";
-    if(a==""||b==""||c=="")
-    {
-        ans="Please enter all field to find answer";
-    }
-    else
-    {
-        a=parseFloat(a);
-        b=parseFloat(b);
-        c=parseFloat(c);
-       var height= (a*0.308)+(b*0.0245);
-        var bm= c/(height**2);
 
-       var vi="The B.M.I is the ratio of your weight in kg and your height in metre's square<br>"
-       vi+=" Square of your Height in metre is: "+height**2;
-       vi+="<br>Your weight is: "+c;
-       vi+="<br>Thus, your B.M.I is: "+ c+" / "+height**2;
-       document.getElementById("bmians1").innerHTML=vi;
-
-        ans="Your B.M.I is: "+bm;
-    }
-    document.getElementById("bmians").innerHTML=ans;
-}
 function clockcal()
 {
     a=document.getElementById("hclock").value;  
@@ -2769,6 +2742,21 @@ function factorialsol() {
     }
     else {
         factorialsolprint.innerHTML = "Please enter a valid number.";
+    }
+}
+
+function bmifind(){
+   
+    let inch = document.getElementById('bmis2').value;
+    let kg = document.getElementById('bmis3').value;
+
+    if( inch !=""||kg!=""){
+    let ans = kg / (inch*inch);
+    let bmi = document.getElementById('bmians');
+    bmi.innerHTML = "Your BMI : " + ans.toFixed(2);
+    }
+    else{
+        bmi.innerHTML = "Please enter a valid number.";
     }
 }
 
