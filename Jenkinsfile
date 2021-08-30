@@ -11,8 +11,8 @@ pipeline{
           allowMissing: false,
           alwaysLinkToLastBuild: true,
           keepAll: true,
-          reportDir: '',
-          reportFiles: 'index.html',
+          reportDir: 'calculators',
+          reportFiles: 'bmiCalculator.html',
           reportName: 'My Reports',
           reportTitles: 'The Report'])
       }
